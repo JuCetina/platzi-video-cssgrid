@@ -1,3 +1,38 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?4uwnch');
+    src:  url('../fonts/icomoon.eot?4uwnch#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?4uwnch') format('truetype'),
+      url('../fonts/icomoon.woff?4uwnch') format('woff'),
+      url('../fonts/icomoon.svg?4uwnch#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: rgb(82, 77, 77);
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-save:before {
+    content: "\e9c2";
+  }
+  .icon-share:before {
+    content: "\ea7d";
+  }
+
 body{
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,7 +41,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 180px 410px 110px 1fr 1fr;
+    grid-template-rows: 180px 410px 133px 1fr 1fr;
     height: 100vh;
     grid-template-areas:    "logo-container video video"
                             "playlist video video"
@@ -39,9 +74,15 @@ body{
 
 .playlist-title,
 .friends-title{
+    padding: 0 12px;
+}
+
+.playlist-title,
+.friends-title,
+.comments-title,
+.suggestions-title{
     font-size: 18px;
     font-weight: normal;
-    padding: 0 12px;
 }
 
 .item{
@@ -72,7 +113,8 @@ body{
     margin: 15px 27px 15px 12px;
 }
 
-.friends-imageContainer img{
+.friends-imageContainer img,
+.comment-image img{
     border-radius: 50%;
     width: 60px;
 }
@@ -116,8 +158,12 @@ body{
 
 .video-button-wrapper{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.video-social{
+    height: 40px;
+    margin-right: 56px;
 }
 
 .video-add{
@@ -158,12 +204,83 @@ body{
     background: #f148ae;
 }
 
+.video-share,
+.video-save{
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(82, 77, 77);
+    font-size: 15px;
+}
 
 .comments{
     grid-area: comments;
 }
 
+.comments,
+.suggestions{
+    padding: 15px 10px 0 22px;
+}
+
+.comments input{
+    padding: 13px 0 13px 47px;
+    border-radius: 8px;
+    width: 72%;
+    border: 2px solid #e8e8e8;
+    background: #ebedf3;
+    color: grey;
+    margin: 0 30px 15px 0;
+    background-image: url('https://picsum.photos/200?random=5');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+}
+
+.comment-container{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.comment-container p{
+    margin: 0 10px 8px 10px;
+    font-size: 14px;
+}
+
+.comments figure{
+    margin: 0;
+}
+
 .suggestions{
     grid-area: suggestions;
+}
+
+.suggestions p{
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        grid-template-rows: 80px 320px 133px 1fr 1fr;
+    }
+
+    .logo-container {
+        padding: 23px 0 0 5px;
+    }
+
+    .video-social{
+        margin-right: 5px;
+    }
+    
+    .comments,
+    .suggestions{
+        padding: 5px 11px 0 22px;
+    }
+
+    .comment-container{
+        margin: 3px;
+    }
 }
 
