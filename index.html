@@ -9,62 +9,73 @@
 </head>
 <body>
     <section class="container">
-        <figure class="logo">
-            <img src="images/logo.png" alt="Logo de PlatziVideo">
-        </figure>
+        <div class="logo-container">
+            <figure class="logo">
+                <img src="images/logo.png" alt="Logo de PlatziVideo">
+            </figure>
+        </div>
         <div class="playlist">
             <h1 class="playlist-title">Mi Playlist</h1>
-            <ol>
-                <li>5 reasons to choose a notebook over a computer desktop</li>
-                <li>get around easily with a new york limousine service</li>
-                <li>how to cook a tender juicy steak</li>
-                <li>how to remove kidney stones</li>
-                <li>the science of superstitions</li>
-                <li>5 reasons to choose a notebook over a computer desktop</li>
-                <li>get around easily with a new york limousine service</li>
-                <li>how to cook a tender juicy steak</li>
-                <li>how to remove kidney stones</li>
-                <li>the science of superstitions</li>
+            <ol class="playlist-list">
+                <li class="item">5 reasons to choose a notebook over a computer desktop</li>
+                <li class="item">get around easily with a new york limousine service</li>
+                <li class="item">how to cook a tender juicy steak</li>
+                <li class="item">how to remove kidney stones</li>
+                <li class="item">the science of superstitions</li>
+                <li class="item">5 reasons to choose a notebook over a computer desktop</li>
+                <li class="item">get around easily with a new york limousine service</li>
+                <li class="item">how to cook a tender juicy steak</li>
+                <li class="item">how to remove kidney stones</li>
+                <li class="item">the science of superstitions</li>
             </ol>
         </div>
         <div class="friends">
-            <h1 class="frients-title">Mis Amigos</h1>
-            <figure class="friends-image">
-                <img src="https://picsum.photos/200?random=1" alt="Mi amigo">
-            </figure>
-            <p>Gordon Carroll</p>
-            <figure class="friends-image">
-                <img src="https://picsum.photos/200?random=2" alt="Mi amigo">
-            </figure>
-            <p>Adeline Wilkins</p>
-            <figure class="friends-image">
-                <img src="https://picsum.photos/200?random=3" alt="Mi amigo">
-            </figure>
-            <p>John Wheeler</p>
-            <figure class="friends-image">
-                <img src="https://picsum.photos/200?random=4" alt="Mi amigo">
-            </figure>
-            <p>Katherine Nelson</p>
+            <h1 class="friends-title">Mis Amigos</h1>
+            <div class="friends-container">
+                <figure class="friends-imageContainer">
+                    <img src="https://picsum.photos/200?random=1" alt="Mi amigo">
+                </figure>
+                <span>Gordon Carroll</span>
+                <figure class="friends-imageContainer">
+                    <img src="https://picsum.photos/200?random=2" alt="Mi amigo">
+                </figure>
+                <span>Adeline Wilkins</span>
+            
+                <figure class="friends-imageContainer">
+                    <img src="https://picsum.photos/200?random=3" alt="Mi amigo">
+                </figure>
+                <span>John Wheeler</span>
+                <figure class="friends-imageContainer">
+                    <img src="https://picsum.photos/200?random=4" alt="Mi amigo">
+                </figure>
+                <span>Katherine Nelson</span>
+            </div>
         </div>
         <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/zCLOJ9j1k2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="video-description">
-            <p class=video-title">Japan in 8k</p>
-            <p class="vistas">124.188 vistas</p>
-            <button class="video-button">Agregar a mi lista</button>
-            <i>icono compartir</i>
-            <p>Compartir</p>
-            <i>icono guardar</i>
-            <p>Guardar</p>
-            <button class="genre">Electronic</button>
-            <button class="genre">Rock</button>
-            <button class="genre">80's</button>
-            <button class="genre">Balad</button>
+            <span class="video-title">Japan in 8K 60fps</span>
+            <span class="video-views">124.188 vistas</span>
+            <div class="video-button-wrapper">
+                <div class="video-social">
+                    <a href="#" class="video-add">Agregar a mi lista</a>
+                    <i></i>
+                    <span>Compartir</span>
+                    <i></i>
+                    <span>Guardar</span>
+                </div>
+                <div class="video-genre">
+                    <a href="#" class="genre-button">Electronic</a>
+                    <a href="#" class="genre-button">Rock</a>
+                    <a href="#" class="genre-button">80's</a>
+                    <a href="#" class="genre-button">Reggae</a>
+                </div>
+            </div>
         </div>
         <div class="comments">
             <h1 class="title-comments">Comentarios</h1>
-            <figure class="friends-image">
+            <figure class="comment-image">
                 <img src="https://picsum.photos/200?random=1" alt="Mi amigo">
             </figure>
             <p>Gordon Carroll</p>
@@ -74,22 +85,23 @@
             </figure>
             <p>Adeline Wilkins</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <figure class="friends-image">
+            <figure class="comment-image">
                 <img src="https://picsum.photos/200?random=3" alt="Mi amigo">
             </figure>
             <p>John Wheeler</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <figure class="friends-image">
+            <figure class="comment-image">
                 <img src="https://picsum.photos/200?random=4" alt="Mi amigo">
             </figure>
             <p>Katherine Nelson</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>
         <div class="suggestions">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zCLOJ9j1k2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>5 reasons to choose a notebook over a computer desktop</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zCLOJ9j1k2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>the science of superstitions</p>
+            <h1 class="title-suggestions">Sugerencias</h1>
+            <iframe width="250" height="150" src="https://www.youtube.com/embed/zCLOJ9j1k2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>5 reasons to choose a notebook over a computer desktop</p>
+            <iframe width="250" height="150" src="https://www.youtube.com/embed/zCLOJ9j1k2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>the science of superstitions</p>
         </div>
     </section>
 </body>

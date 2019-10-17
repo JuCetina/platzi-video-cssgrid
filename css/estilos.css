@@ -1,10 +1,169 @@
 body{
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .container{
-    /* display: grid;
-    grid-template-columns: 400px 1fr 1fr;
-    grid-template-rows: 200px 400px 200px 1fr 1fr; */
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: 180px 410px 110px 1fr 1fr;
+    height: 100vh;
+    grid-template-areas:    "logo-container video video"
+                            "playlist video video"
+                            "playlist video-description video-description"
+                            "playlist comments suggestions"
+                            "friends comments suggestions";
+}
+
+.logo-container{
+    grid-area: logo-container;
+    background: #151b31; 
+     padding: 40px 0 0 22px;
+}
+
+.logo{
+    margin: 0;
+}
+
+.playlist{
+    grid-area: playlist;
+}
+
+.playlist,
+.friends{
+    background: #151b31;
+    color: white; 
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.playlist-title,
+.friends-title{
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0 12px;
+}
+
+.item{
+    padding-left: 19px;
+    margin: 18px 12px 12px -12px;
+}
+
+.item:nth-of-type(10){
+    margin-left: -5px;
+    padding-left: 12px;
+}
+
+.friends{
+    grid-area: friends;
+}
+
+.friends-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.friends-container span{
+    margin: 0 10px 0;
+}
+
+.friends-imageContainer{
+    margin: 15px 27px 15px 12px;
+}
+
+.friends-imageContainer img{
+    border-radius: 50%;
+    width: 60px;
+}
+
+.video{
+    grid-area: video;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.video iframe{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-description{
+    grid-area: video-description;
+    border-bottom: 1px solid lightgrey;
+}
+
+.video-title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 0 5px 8px;
+    display: block;
+}
+
+.video-views{
+    font-size: 14px;
+    color: gray;
+    padding: 0 0 10px 9px;
+    display: block;
+}
+
+.video-button-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.video-add{
+    padding: 7px 10px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-size: 12px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ef017c+0,ff5db1+100 */
+    background: #ef017c; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ef017c 0%, #ff5db1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ef017c 0%,#ff5db1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ef017c 0%,#ff5db1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef017c', endColorstr='#ff5db1',GradientType=0 ); /* IE6-9 */
+}
+
+.video-genre a{
+    color: white;
+    font-size: 13px;
+    background: #c748f1;
+    padding: 5px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.video-genre a:nth-of-type(2){
+    background: #1ee2e2;
+    height: 50px;
+}
+
+.video-genre a:nth-of-type(3){
+    background: red;
+}
+
+.video-genre a:nth-of-type(4){
+    background: #f148ae;
+}
+
+
+.comments{
+    grid-area: comments;
+}
+
+.suggestions{
+    grid-area: suggestions;
 }
 
